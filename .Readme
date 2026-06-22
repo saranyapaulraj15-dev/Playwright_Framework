@@ -1,0 +1,25 @@
+playwright-ts-framework/
+├── src/
+│   ├── pages/                  Page Object Model classes
+│   │   ├── BasePage.ts         Shared, wait-safe action wrappers
+│   │   ├── LoginPage.ts
+│   │  
+│   ├── fixtures/
+│   │   └── pageFixtures.ts     Custom test fixture injecting page objects
+│   ├── utils/
+│   │   ├── testData.ts         Centralized test data (users, products)
+│   │           
+│   └── tests/
+│       ├── login.spec.ts
+│       
+├── .github/workflows/
+│   └── playwright.yml          CI/CD pipeline
+├── playwright.config.ts        Central Playwright configuration
+├── Dockerfile
+├── docker-compose.yml
+├── package.json
+├── tsconfig.json
+├── .eslintrc.json
+├── .prettierrc
+├── .env   -.env.QA
+└── .gitignore

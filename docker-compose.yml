@@ -1,0 +1,16 @@
+version: '3.8'
+ 
+services:
+  playwright-tests:
+    build: .
+    container_name: playwright-ts-framework
+    environment:
+      - BASE_URL=${BASE_URL:-https://www.saucedemo.com}
+      - CI=true
+    # Required so Chromium/WebKit don't run out of shared memory inside Docker
+    ipc: host
+    volumes:
+      - ./playwright-report:/app/playwright-report
+      - ./allure-results:/app/allure-results
+      - ./test-results:/app/test-results
+    command: npx playwright test
