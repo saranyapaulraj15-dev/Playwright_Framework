@@ -1,25 +1,32 @@
 playwright-ts-framework/
+├── .env   -.env.QA
+├── .github/workflows/
+│   └── playwright.yml          CI/CD pipeline
+├──reports          to store allure report&html report
+│     ├──allur-playwright report
+│     └──html-report
 ├── src/
 │   ├── pages/                  Page Object Model classes
 │   │   ├── BasePage.ts         Shared, wait-safe action wrappers
-│   │   ├── LoginPage.ts
+│   │   └── LoginPage.ts
 │   │  
 │   ├── fixtures/
 │   │   └── pageFixtures.ts     Custom test fixture injecting page objects
 │   ├── utils/
-│   │   ├── testData.ts         Centralized test data (users, products)
+│   │   └── testData.ts         Centralized test data (users, products)
 │   │           
 │   └── tests/
-│       ├── login.spec.ts
-│       
-├── .github/workflows/
-│   └── playwright.yml          CI/CD pipeline
-├── playwright.config.ts        Central Playwright configuration
-├── Dockerfile
-├── docker-compose.yml
-├── package.json
-├── tsconfig.json
+│       └── login.spec.ts
+├──test-data
+│       └──loginData.json       to store login data or credentials
+├──testresults
+│      └──screenshort    to store testresults as screenshort 
 ├── .eslintrc.json
+├── .gitignore
 ├── .prettierrc
-├── .env   -.env.QA
-└── .gitignore
+├── docker-compose.yml
+├── Dockerfile
+├── package-lock.json
+├── package.json
+├── playwright.config.ts        Central Playwright configuration
+└── tsconfig.json

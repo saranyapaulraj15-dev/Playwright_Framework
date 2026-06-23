@@ -127,7 +127,7 @@ export abstract class BasePage {
   async takeScreenshot(name: string): Promise<void> {
     try {
       await this.page.screenshot({
-        path: `test-results/screenshots/${name}.png`,
+        path: `test-result/screenshots/${name}.png`,
         fullPage: true,
       });
     } catch (error) {
