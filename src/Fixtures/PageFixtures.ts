@@ -1,11 +1,11 @@
 import { test as base } from '@playwright/test';
-import { LoginPage } from '../Pagess/Loginpage';
+import { LoginPage } from '../Pages/Loginpage';
 
 
  
 /**
  * Extends Playwright's base `test` with our Page Objects so every spec
- * file can simply destructure { loginPage, inventoryPage, ... } from the
+ * file can simply destructure { loginPage, , ... } from the
  * test args instead of manually instantiating classes.
  */
 type Pages = {

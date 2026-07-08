@@ -1,18 +1,18 @@
 {
   "compilerOptions": {
     "target": "ES2022",
-    "module": "commonjs",
+    "module": "nodenext",
     "lib": ["ES2022", "DOM"],
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true,
     "resolveJsonModule": true,
-    "moduleResolution": "node",
-    "ignoreDeprecations": "6.0",
-    "baseUrl": ".",
+    "types": ["nodenext", "playwright", "playwright/test"],
+    "moduleResolution": "nodenext",
+    "baseUrl": "./",
     "paths": {
-      "@pages/*": ["src/pages/*"],
+      "@pages/*": ["src/Pages/*"],
       "@fixtures/*": ["src/fixtures/*"],
       "@utils/*": ["src/utils/*"],
       "@tests/*": ["src/tests/*"]

@@ -1,18 +1,40 @@
 {
-  "name": "playwright_framework",
+  "name": "playwright-ts-framework",
   "version": "1.0.0",
-  "description": "",
+  "description": "Production-ready Playwright + TypeScript automation framework with Page Object Model, Allure & HTML reporting, Docker support and GitHub Actions CI/CD",
   "main": "index.js",
-  "scripts": {},
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs",
-  "devDependencies": {
-    "@playwright/test": "^1.61.0",
-    "@types/node": "^25.9.4"
+  "license": "MIT",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:debug": "playwright test --debug",
+    "test:ui": "playwright test --ui",
+    "test:chromium": "playwright test --project=chromium",
+    "test:firefox": "playwright test --project=firefox",
+    "test:webkit": "playwright test --project=webkit",
+    "test:mobile": "playwright test --project=\"Mobile Chrome\"",
+    "test:smoke": "playwright test --grep @smoke",
+    "test:regression": "playwright test --grep @regression",
+    "report:html": "playwright show-report",
+    "allure:generate": "allure generate ./allure-results --clean -o ./allure-report",
+    "allure:open": "allure open ./allure-report",
+    "allure:report": "npm run allure:generate && npm run allure:open",
+    "docker:build": "docker build -t playwright-ts-framework .",
+    "docker:test": "docker-compose up --build --abort-on-container-exit",
+    "lint": "eslint . --ext .ts",
+    "format": "prettier --write \"**/*.ts\"",
+    "codegen": "playwright codegen"
   },
-  "dependencies": {
-    "winston": "^3.19.0"
+  "devDependencies": {
+    "@playwright/test": "^1.48.0",
+    "@types/node": "^20.19.43",
+    "@typescript-eslint/eslint-plugin": "^7.18.0",
+    "@typescript-eslint/parser": "^7.18.0",
+    "allure-commandline": "^2.30.0",
+    "allure-playwright": "^3.0.6",
+    "dotenv": "^16.4.5",
+    "eslint": "^8.57.0",
+    "prettier": "^3.3.3",
+    "typescript": "^6.0.3"
   }
 }

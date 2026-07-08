@@ -1,5 +1,6 @@
 playwright-ts-framework/
-├── .env   -.env.QA
+├── .env 
+    |__.env.QA   
 ├── .github/workflows/
 │   └── playwright.yml          CI/CD pipeline
 ├──reports          to store allure report&html report
@@ -13,8 +14,8 @@ playwright-ts-framework/
 │   ├── fixtures/
 │   │   └── pageFixtures.ts     Custom test fixture injecting page objects
 │   ├── utils/
-│   │   └── testData.ts         Centralized test data (users, products)
-│   │           
+│   │   └──helpers.ts              Centralized test data (users,products)      
+│   │   └── testData.ts   
 │   └── tests/
 │       └── login.spec.ts
 ├──test-data

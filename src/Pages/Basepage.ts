@@ -24,6 +24,7 @@ export abstract class BasePage {
     }
   }
 
+
   async fill(locator: Locator, value: string): Promise<void> {
     try {
       await locator.waitFor({ state: 'visible' });
@@ -33,6 +34,8 @@ export abstract class BasePage {
     }
   }
 
+
+
   async type(locator: Locator, value: string): Promise<void> {
     try {
       await locator.waitFor({ state: 'visible' });
@@ -41,6 +44,7 @@ export abstract class BasePage {
       throw new Error(`Failed to type '${value}': ${error}`);
     }
   }
+  
 
   async getText(locator: Locator): Promise<string> {
     try {
